@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'demo-app',
+  selector: 'app-restaurant-menu',
   standalone: true,
 })
-export class DemoApp {}
+export class AppRestaurantMenu {}
