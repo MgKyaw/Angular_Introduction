@@ -3,7 +3,9 @@
     <img [src]="logoUrl" alt="Restaurant Logo">
     <main>
         @for (dish of dishes; track dish) {
-            <li>{{ dish.name }}</li>
+            <div class="dish">
+                {{dish.name}}
+            </div>
         } @empty {
             <li>There are no items.</li>
         }
