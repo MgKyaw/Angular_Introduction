@@ -1,7 +1,7 @@
 <div class="container">
     <h1>{{restaurantName}}</h1>
     <img [src]="logoUrl" alt="Restaurant Logo">
-    <main>
+    <main #menuElement>
         @for (dish of dishes; track dish) {
             <div class="dish">
                 <h3>{{dish.name}}</h3>
