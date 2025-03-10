@@ -13,5 +13,8 @@
         }
     </main>
     <div class="menu-items">
+        @if (menuElement) {
+          <span>Today's menu has {{ dishes.length }} dishes.</span>
+        }
     </div>
 </div>
