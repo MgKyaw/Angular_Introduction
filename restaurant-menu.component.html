@@ -3,18 +3,18 @@
     <img [src]="logoUrl" alt="Restaurant Logo">
     <main #menuElement>
         @for (dish of dishes; track dish) {
-            <div class="dish">
-                <h3>{{dish.name}}</h3>
-                <p>{{ dish.description }}</p>
-                <img [src]="dish.imageUrl" width="200" height="200" alt="{{ dish.name }}" />
-            </div>
+        <div class="dish">
+            <h3>{{dish.name}}</h3>
+            <p>{{ dish.description }}</p>
+            <img [src]="dish.imageUrl" width="200" height="200" alt="{{ dish.name }}" />
+        </div>
         } @empty {
-            <li>There are no items.</li>
+        <li>There are no items.</li>
         }
     </main>
     <div class="menu-items">
         @if (menuElement) {
-          <span>Today's menu has {{ dishes.length }} dishes.</span>
+        <span>Today's menu has {{ dishes.length }} dishes.</span>
         }
     </div>
 </div>
