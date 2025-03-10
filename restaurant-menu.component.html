@@ -1,11 +1,13 @@
 <div class="container">
     <h1>{{restaurantName}}</h1>
     <img [src]="logoUrl" alt="Restaurant Logo">
-    <main>
-        @for (dish of dishes; track dish.name) {
-         <li>{{ dish.name }}</li>
-        } @empty {
-         <li>There are no items.</li>
+    <main #menuElement>
+        @for(dish of dishes; track dish){
+          <div class="dish">
+             <h3>{{dish.name}}</h3>
+             <p>{{dish.description}}</p>
+             <img [src]="dish.imageUrl" width="200" height="200" alt="{{ dish.name }}">
+          </div>
         }
     </main>
     <div class="menu-items">
